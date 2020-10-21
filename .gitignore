@@ -2,5 +2,5 @@
 *.o
 *.wad
 
-linuxxdoom
-sndserver
+dist
+*/build
