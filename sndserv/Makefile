@@ -11,13 +11,14 @@ CFLAGS=-O -DNORMALUNIX -DLINUX
 LDFLAGS=
 LIBS=-lm
 
-O=linux
+O=build
 
-all:	 $(O)/sndserver
+all: clean $(O)/sndserver
+.PHONY: all
 
 clean:
 	rm -f *.o *~ *.flc
-	rm -f linux/*
+	rm -f $(O)/*
 
 # Target
 $(O)/sndserver: \
@@ -34,6 +35,7 @@ $(O)/sndserver: \
 
 # Rule
 $(O)/%.o: %.c
+	mkdir -p $(O)
 	$(CC) $(CFLAGS) -c $< -o $@
 
 

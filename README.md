@@ -1,4 +1,10 @@
-# DOOM 
+# DOOM
+
+## Required libs
+- libc6-dev:i386
+- libx11-dev:i386
+- libxext-dev:i386
+- gcc-[version]-multilib
 
 ## Running on linux with scaled window
 
